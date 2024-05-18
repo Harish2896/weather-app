@@ -53,6 +53,17 @@ function App() {
     e.preventDefault();
   };
   console.log(weatherInfo);
+  const titleClickHandler = () => {
+    setIsSuggestionOpen(false);
+    setCoordinatesArray("");
+    setSearchString("");
+    setSelectedCoordinates("");
+    setSuggestions([]);
+    setWeatherInfo("");
+    setBgImageURL(
+      "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    );
+  };
   return (
     <main
       style={{
@@ -63,7 +74,10 @@ function App() {
       }
     >
       <section className="w-8/12 bg-[rgba(0,0,0,0.3)] text-3xl text-center tracking-wider flex flex-col justify-between">
-        <header className="text-white text-left w-full text-[22px] italic pl-4 pt-4">
+        <header
+          className="text-white text-left w-full text-[22px] italic pl-4 pt-4 cursor-pointer"
+          onClick={titleClickHandler}
+        >
           WEATHER.io
         </header>
         <div>{weatherInfo && <WeatherInfo weatherInfo={weatherInfo} />}</div>

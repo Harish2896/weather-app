@@ -7,11 +7,13 @@ const WeatherDetails = (props) => {
           <span>Cloud</span>
           <span>Humidity</span>
           <span>Wind</span>
+          <span>Temp F</span>
         </div>
         <div className="flex flex-col space-y-3">
           <span>{props.weatherInfo.current.cloud} %</span>
           <span>{props.weatherInfo.current.humidity} %</span>
           <span>{props.weatherInfo.current.wind_kph} km/h</span>
+          <span>{props.weatherInfo.current.temp_f} F</span>
         </div>
       </div>
     </section>
