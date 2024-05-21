@@ -64,7 +64,7 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         return "/src/assets/sunny.jpg";
     }
   };
-  console.log(url());
-  console.log(code);
+  // console.log(url());
+  // console.log(code);
   return setBgImageURL(url());
 };

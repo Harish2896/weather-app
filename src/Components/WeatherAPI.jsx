@@ -16,7 +16,7 @@ const WeatherAPI = (props) => {
         props.setBgImageURL
       );
 
-      console.log(data);
+      // console.log(data);
     };
     weatherData();
   }, [props.selectedCoordinates]);

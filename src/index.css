@@ -8,4 +8,7 @@
     body{
         overflow: hidden;
     }
+    ::selection{
+        background: rgb(152, 157, 160);
+    }
 }

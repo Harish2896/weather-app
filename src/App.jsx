@@ -40,9 +40,9 @@ function App() {
               return data.center;
             })
           );
-          console.log(bgImageURL);
+          // console.log(bgImageURL);
         } catch (error) {
-          console.log(error.message);
+          // console.log(error.message);
         }
       };
       fetchCoordinatesArray();
@@ -52,7 +52,7 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
   };
-  console.log(weatherInfo);
+  // console.log(weatherInfo);
   const titleClickHandler = () => {
     setIsSuggestionOpen(false);
     setCoordinatesArray("");
@@ -70,10 +70,10 @@ function App() {
         backgroundImage: `url(${bgImageURL})`,
       }}
       className={
-        "w-screen h-screen bg-black flex font-roboto bg-cover bg-center transition-all duration-500"
+        "md:flex-row flex flex-col justify-between w-screen h-screen bg-black font-roboto bg-cover bg-center transition-all duration-500"
       }
     >
-      <section className="w-8/12 bg-[rgba(0,0,0,0.3)] text-3xl text-center tracking-wider flex flex-col justify-between">
+      <section className="md:w-8/12 md:h-auto md:justify-between  w-full h-[55%] bg-[rgba(0,0,0,0.3)] text-3xl text-center tracking-wider flex flex-col justify-normal">
         <header
           className="text-white text-left w-full text-[22px] italic pl-4 pt-4 cursor-pointer"
           onClick={titleClickHandler}
@@ -82,7 +82,7 @@ function App() {
         </header>
         <div>{weatherInfo && <WeatherInfo weatherInfo={weatherInfo} />}</div>
       </section>
-      <section className="w-4/12 flex flex-col justify-between bg-[rgba(110,110,110,0.35)] border-white border-l-[1px] border-opacity-20 shadow-[rgba(0,0,0,0.3)] shadow-xl backdrop-blur-sm backdrop-brightness-[70%]">
+      <section className="md:w-4/12 md:h-auto w-full h-[45%]  flex flex-col justify-between bg-[rgba(110,110,110,0.35)] border-white border-l-[1px] border-opacity-20 shadow-[rgba(0,0,0,0.3)] shadow-xl backdrop-blur-sm backdrop-brightness-[70%]">
         <form onSubmit={submitHandler} autoComplete="off">
           <SearchBox
             searchString={searchString}
