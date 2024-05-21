@@ -2,20 +2,20 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
   const url = () => {
     switch (true) {
       case text === "Clear":
-        return "/src/clearSky.jpg";
+        return "/clearSky.jpg";
 
       case code === 1003 || code === 1006 || code === 1009:
-        return "/src/partlyCloudy.jpg";
+        return "/partlyCloudy.jpg";
 
       case code === 1030 || code === 1135 || code === 1147:
-        return "/src/misty.jpg";
+        return "/misty.jpg";
 
       case code === 1087 ||
         code === 1273 ||
         code === 1276 ||
         code === 1279 ||
         code === 1282:
-        return "/src/thunder.jpg";
+        return "/thunder.jpg";
 
       case code === 1069 ||
         code === 1072 ||
@@ -31,7 +31,7 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         code === 1261 ||
         code === 1264 ||
         code === 1207:
-        return "/src/sleet.jpg";
+        return "/sleet.jpg";
 
       case code === 1066 ||
         code === 1114 ||
@@ -44,7 +44,7 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         code === 1225 ||
         code === 1255 ||
         code === 1258:
-        return "/src/snow.jpg";
+        return "/snow.jpg";
 
       case code === 1063 ||
         code === 1150 ||
@@ -58,10 +58,10 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         code === 1243 ||
         code === 1246 ||
         code === 1195:
-        return "/src/rain.jpg";
+        return "/rain.jpg";
 
       default:
-        return "/src/sunny.jpg";
+        return "/sunny.jpg";
     }
   };
   // console.log(url());
