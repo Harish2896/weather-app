@@ -2,20 +2,20 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
   const url = () => {
     switch (true) {
       case text === "Clear":
-        return "/src/assets/clearSky.jpg";
+        return "/public/assets/clearSky.jpg";
 
       case code === 1003 || code === 1006 || code === 1009:
-        return "/src/assets/partlyCloudy.jpg";
+        return "/public/assets/partlyCloudy.jpg";
 
       case code === 1030 || code === 1135 || code === 1147:
-        return "/src/assets/misty.jpg";
+        return "/public/assets/misty.jpg";
 
       case code === 1087 ||
         code === 1273 ||
         code === 1276 ||
         code === 1279 ||
         code === 1282:
-        return "/src/assets/thunder.jpg";
+        return "/public/assets/thunder.jpg";
 
       case code === 1069 ||
         code === 1072 ||
@@ -31,7 +31,7 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         code === 1261 ||
         code === 1264 ||
         code === 1207:
-        return "/src/assets/sleet.jpg";
+        return "/public/assets/sleet.jpg";
 
       case code === 1066 ||
         code === 1114 ||
@@ -44,7 +44,7 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         code === 1225 ||
         code === 1255 ||
         code === 1258:
-        return "/src/assets/snow.jpg";
+        return "/public/assets/snow.jpg";
 
       case code === 1063 ||
         code === 1150 ||
@@ -58,10 +58,10 @@ export const setBackgroundImage = (code, text, setBgImageURL) => {
         code === 1243 ||
         code === 1246 ||
         code === 1195:
-        return "/src/assets/rain.jpg";
+        return "/public/assets/rain.jpg";
 
       default:
-        return "/src/assets/sunny.jpg";
+        return "/public/assets/sunny.jpg";
     }
   };
   // console.log(url());
