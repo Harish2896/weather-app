@@ -16,7 +16,7 @@ function App() {
   const [selectedCoordinates, setSelectedCoordinates] = useState();
   const [weatherInfo, setWeatherInfo] = useState();
   const [bgImageURL, setBgImageURL] = useState(
-    "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   );
 
   // console.log(searchString);
@@ -61,7 +61,7 @@ function App() {
     setSuggestions([]);
     setWeatherInfo("");
     setBgImageURL(
-      "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     );
   };
   return (
@@ -80,6 +80,12 @@ function App() {
         >
           WEATHER.io
         </header>
+        {!weatherInfo && (
+          <div className="text-white text-8xl text-left pl-4 lg:flex w-[500px] pb-24 relative hidden">
+            Know your Weather...{" "}
+            <span className="absolute left-[100%] top-[16%]">→</span>
+          </div>
+        )}
         <div>{weatherInfo && <WeatherInfo weatherInfo={weatherInfo} />}</div>
       </section>
       <section className="md:w-4/12 md:h-auto w-full h-[45%]  flex flex-col justify-between bg-[rgba(110,110,110,0.35)] border-white border-l-[1px] border-opacity-20 shadow-[rgba(0,0,0,0.3)] shadow-xl backdrop-blur-sm backdrop-brightness-[70%]">
