@@ -75,7 +75,7 @@ function App() {
     >
       <section className="md:w-8/12 md:h-auto md:justify-between  w-full h-[55%] bg-[rgba(0,0,0,0.3)] text-3xl text-center tracking-wider flex flex-col justify-normal">
         <header
-          className="text-white text-left w-full text-[22px] italic pl-4 pt-4 cursor-pointer"
+          className="text-white text-left w-full text-[22px] italic pl-4 pt-4 cursor-pointer hover:text-gray-900"
           onClick={titleClickHandler}
         >
           WEATHER.io
